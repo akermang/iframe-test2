@@ -1,0 +1,281 @@
+<!-- <%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8" errorPage="/error.jsp"%>
+<jsp:useBean id="transactionDetails" scope="request" type="com.creditguard.common.transactions.TransactionDetails" />
+<%@ page import="java.text.DecimalFormat" %>
+<%@ include file="/merchantPages/WebSources/includes/main.jsp" %>
+
+<%! DecimalFormat formatter = new DecimalFormat("0.00"); %> -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="expires" content="-1">
+			<!-- load MUI -->
+	<link href="https://cdn.muicss.com/mui-0.10.0/css/mui.min.css" rel="stylesheet" type="text/css"/>
+	<script src="https://cdn.muicss.com/mui-0.10.0/js/mui.min.js"></script>
+
+	<script src="merchantPages/WebSources/js/<%=lang%>.js"></script>
+	<script src="merchantPages/phoenix21makor/main.js"></script>
+	<link href="merchantPages/WebSources/css/main.rtl.css" rel="stylesheet" type="text/css" />
+	<!-- Bambi FNX CSS -->
+	<link href="./BambiFnxCss/main.css" rel="stylesheet" type="text/css" />
+	<!-- <%=engCSS%> -->
+	<title></title>
+	<style type="text/css">
+		.btn_submit
+		{
+			background-color: #0088cc;
+			color: white;
+			padding: 5px;
+			padding-left: 30px;
+			padding-right: 30px;
+			font-size: 20px;
+		}
+		#data_tbl td
+		{
+			font-size: 12px;
+			color: #575656;
+			font-family: Arial, Helvetica,Arial, sans-serif;
+		}
+		.textBox100
+		{
+			width: 160px;
+			direction: rtl;
+			text-align: right;
+			font-family: Arial; /*background-color: #ececec;*/
+			padding: 5px;
+			font-size: 16px;
+		}
+		.ddl
+		{
+			direction: rtl;
+			text-align: right;
+			font-family: Arial;
+			padding: 5px;
+			font-size: 16px;
+		}
+		.Inputselect
+		{
+			direction: rtl;
+			text-align: right;
+			font-family: Arial;
+			padding: 5px;
+			font-size: 15px;
+		}
+		#paging_wrap_content
+		{
+			padding-top: 1px;
+			padding-bottom: 1px;
+			background: #f2f3f5;
+			font-family: arial;
+			height: 23px;
+		}
+		.pagingNextText
+		{
+			vertical-align: top;
+			position: absolute;
+			left: 30px;
+			background: #f2f3f5;
+			top: 1px;
+		}
+		.alink
+		{
+			font: normal 13px Arial;
+			color: #014f8f;
+			text-decoration: none;
+			vertical-align: middle;
+		}
+		.pagingNextImg
+		{
+			margin-top: 0px;
+			margin-bottom: -4px;
+			height: 21px;
+			left: 5px;
+			position: absolute;
+			top: 1px;
+			border-width: 0px;
+			z-index: 1;
+		}
+		div#main
+		{
+			padding: 0px !important;
+		}
+		body
+		{
+			margin: 0px !important;
+			padding: 0px !important;
+		}
+		#data_tbl .td_style_fieldName
+		{
+			font-size: 16px;
+			font-weight: bold;
+		}
+	</style>
+	
+<!-- <%
+      Calendar cal = Calendar.getInstance();
+      int currentMonth = cal.get(Calendar.MONTH) + 1;
+
+      // 2 years ahead
+      cal.add(Calendar.YEAR, 2);
+      int year = cal.get(Calendar.YEAR);
+%>	 -->
+	
+</head>
+
+<body onload="resetForm();">
+	<!--  DISPLAY TRANSACTION INFORMATION -->
+	<div id="main_frame" align="center">
+		<div id="main">
+			<form id="creditForm" onsubmit="return validateForm();" method="POST" action="ProcessCreditCard">
+			<input type="hidden" name="txId" value="<%=mpiTxnId%>" />
+			<input type="hidden" name="lang" value="<%=lang%>" />
+			<input type="hidden" name="track2" value="" autocomplete="off" />
+			<input type="hidden" name="last4d" value="" autocomplete="off" />
+			<input type="hidden" name="transactionCode" value="Phone" autocomplete="off" />
+			
+		<!--	<input type="text" name="expMonth" value="<%=currentMonth%>" />
+		<input type="text" name="expYear" value="<%=year%>" />   -->			
+			<!--<input type="hidden" name="userData1" value=""/>
+	<input type="hidden" name="userData2" value=""/>
+	<input type="hidden" name="userData3" value=""/>
+	<input type="hidden" name="userData4" value=""/>
+	<input type="hidden" name="userData5" value=""/>
+	<input type="hidden" name="userData6" value=""/>
+	<input type="hidden" name="userData7" value=""/>
+	<input type="hidden" name="userData8" value=""/>
+	<input type="hidden" name="userData9" value=""/>
+	<input type="hidden" name="userData10" value=""/>-->
+			<div>
+			</div>
+			<table id="data_tbl" border="0" width="400px" cellpadding="0" cellspacing="0" class="data_tbl"
+				style="direction: rtl; text-align: right">
+				<tr>
+					<td colspan="3">
+						<div style="float: right">
+							<h1 style="margin: 0px; margin-top: 52px">
+								הזנת פרטי כרטיס אשראי</h1>
+						</div>
+						<div style="float: left">
+							<img src='merchantPages/phoenix20/images/logo_fnx.png' alt='logo_fnx' />
+						</div>
+						<div style="clear: both">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="height: 25px;">
+					<hr />
+					</td>
+				</tr>
+				<!--  
+				<tr>
+					<td class="td_style_fieldName">
+						תעודת זהות:
+					</td>
+					<td>
+						<input type="text" id="personalId" name="personalId" maxlength="9" class="textBox100"
+							autocomplete="off" />
+					</td>
+					<td class="td_style_invalidField" id="invalidPersonalId">
+						&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="height: 25px;">
+					</td>
+				</tr>
+				-->
+				<tr>
+					<td class="td_style_fieldName" style="width: 145px;">
+						מספר כרטיס אשראי:
+					</td>
+					<td>
+						<input type="text" id="cardNumber" name="cardNumber" maxlength="19" class="textBox100"
+							autocomplete="off" onchange="validateCardNumber();" />
+					</td>
+					<td class="td_style_invalidField" id="invalidCardNumber">
+						&nbsp;
+					</td>
+					<tr> 
+					<td>
+
+
+
+				</tr>
+				 
+				<tr>
+					<td colspan="3" style="height: 15px;">
+					</td>
+				</tr>
+				<tr>
+					<td class="td_style_fieldName">
+						תוקף :
+					</td>
+					<td>
+						<select id="expYear" name="expYear" onchange="validateExpDate();" class="Inputselect">
+							<%=expYear%>
+						</select>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<select id="expMonth" name="expMonth" onchange="validateExpDate();" class="Inputselect">
+							<option value="01">01</option>
+							<option value="02">02</option>
+							<option value="03">03</option>
+							<option value="04">04</option>
+							<option value="05">05</option>
+							<option value="06">06</option>
+							<option value="07">07</option>
+							<option value="08">08</option>
+							<option value="09">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+					</td>
+					<td class="td_style_invalidField" id="invalidCardExp">
+						&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="height: 15px;">
+					<hr />
+					</td>
+				</tr>
+
+
+				<tr>
+					<td colspan="3" style="height: 25px;">
+					</td>
+				</tr>
+				<tr>
+				<td></td>
+					<td align="left">
+						<input type="submit" id="submitBtn" value="שלח" class="btn_submit" />
+					</td>
+					<td></td>
+				</tr>
+			</table>
+			</form>
+		</div>
+		<br />
+		<table border="0">
+			<tr>
+				<td align="right">
+					<!-- GeoTrust True Site [tm] Smart Icon tag. Do not edit. -->
+					<script language="JavaScript" type="text/javascript" src="//smarticon.geotrust.com/si.js"></script>
+					<!-- end GeoTrust Smart Icon tag -->
+				</td>
+				<td align="left">
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
