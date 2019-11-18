@@ -132,7 +132,7 @@
 
 <body onload="resetForm();">
 	<!--  DISPLAY TRANSACTION INFORMATION -->
-	<div id="main_frame" align="center">
+	<div id="main_frame" class="payment-container">
 		<div id="main">
 			<form id="creditForm" onsubmit="return validateForm();" method="POST" action="ProcessCreditCard">
 			<input type="hidden" name="txId" value="<%=mpiTxnId%>" />
@@ -158,10 +158,10 @@
 				style="direction: rtl; text-align: right">
 				<tr>
 					<td colspan="3">
-						<div style="float: right">
+						<!-- <div style="float: right">
 							<h1 style="margin: 0px; margin-top: 52px">
 								הזנת פרטי כרטיס אשראי</h1>
-						</div>
+						</div> -->
 					</td>
 				</tr>
 				<tr>
@@ -169,24 +169,7 @@
 					<hr />
 					</td>
 				</tr>
-				<!--  
-				<tr>
-					<td class="td_style_fieldName">
-						תעודת זהות:
-					</td>
-					<td>
-						<input type="text" id="personalId" name="personalId" maxlength="9" class="textBox100"
-							autocomplete="off" />
-					</td>
-					<td class="td_style_invalidField" id="invalidPersonalId">
-						&nbsp;
-					</td>
-				</tr>
-				<tr>
-					<td colspan="3" style="height: 25px;">
-					</td>
-				</tr>
-				-->
+			
 				<tr>
 					<td class="td_style_fieldName" style="width: 145px;">
 						מספר כרטיס אשראי:
