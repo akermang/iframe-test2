@@ -133,8 +133,8 @@
 						action="ProcessCreditCard"
 						class="mui-form"
 					>
-						<input type="hidden" name="txId" value="<%=mpiTxnId%>" />
-						<input type="hidden" name="lang" value="<%=lang%>" />
+						<input type="hidden" name="txId" value="708a39a0&#45;c131&#45;49f1&#45;8bff&#45;38dcb9f0d01a" />
+						<input type="hidden" name="lang" value="HE" />
 						<input type="hidden" name="track2" value="" autocomplete="off" />
 						<input type="hidden" name="last4d" value="" autocomplete="off" />
 						<input
@@ -170,17 +170,10 @@
 									</div>
 								</div>
 
-								<div
-									id="ExpirationDateContainer"
-									class="expiration-date-container"
-								>
-									<div
-										class="input-label-wrapp"
-										id="ExpirationDateLabelContainer"
-									>
+								<div id="ExpirationDateContainer" class="expiration-date-container">
+									<div class="input-label-wrapp" id="ExpirationDateLabelContainer">
 										<label class="input-payment-label">תוקף</label>
 									</div>
-
 									<div class="exp-container">
 										<div class="exp-year-wrapper mui-select">
 											<select
@@ -193,20 +186,19 @@
 												title="שנה"
 											>
 												<option disabled selected>שנה</option>
-												<option value="2019">2019</option>
-												<option value="2020">2020</option>
-												<option value="2021">2021</option>
-												<option value="2022">2022</option>
-												<option value="2023">2023</option>
-												<option value="2024">2024</option>
-												<option value="2025">2025</option>
-												<option value="2026">2026</option>
-												<option value="2027">2027</option>
-												<option value="2028">2028</option>
-												<option value="2029">2029</option>
+												<option id='yearOption1' value="19">2019</option>
+												<option id='yearOption2' value="20">2020</option>
+												<option id='yearOption3' value="21">2021</option>
+												<option id='yearOption4' value="22">2022</option>
+												<option id='yearOption5' value="23">2023</option>
+												<option id='yearOption6' value="24">2024</option>
+												<option id='yearOption7' value="25">2025</option>
+												<option id='yearOption8' value="26">2026</option>
+												<option id='yearOption9' value="27">2027</option>
+												<option id='yearOption10' value="28">2028</option>
+												<option id='yearOption11' value="29">2029</option>
 											</select>
 										</div>
-
 										<div class="exp-month-wrapper mui-select">
 											<select
 												id="expMonth"
@@ -218,20 +210,23 @@
 												title="חודש"
 											>
 												<option disabled selected>חודש</option>
-												<option value="01">01</option>
-												<option value="02">02</option>
-												<option value="03">03</option>
-												<option value="04">04</option>
-												<option value="05">05</option>
-												<option value="06">06</option>
-												<option value="07">07</option>
-												<option value="08">08</option>
-												<option value="09">09</option>
-												<option value="10">10</option>
-												<option value="11">11</option>
-												<option value="12">12</option>
+												<option id='monthOption1' value="01">01</option>
+												<option id='monthOption2' value="02">02</option>
+												<option id='monthOption3' value="03">03</option>
+												<option id='monthOption4' value="04">04</option>
+												<option id='monthOption5' value="05">05</option>
+												<option id='monthOption6' value="06">06</option>
+												<option id='monthOption7' value="07">07</option>
+												<option id='monthOption8' value="08">08</option>
+												<option id='monthOption9' value="09">09</option>
+												<option id='monthOption10' value="10">10</option>
+												<option id='monthOption11' value="11">11</option>
+												<option id='monthOption12' value="12">12</option>
 											</select>
 										</div>
+									</div>
+									<div class="td_style_invalidField" id="invalidCardExp">
+										&nbsp;
 									</div>
 								</div>
 							</div>
@@ -254,14 +249,10 @@
 									/>
 								</div>
 							</div>
-							<!-- GeoTrust True Site [tm] Smart Icon tag. Do not edit. -->
-							<script
-								language="JavaScript"
-								type="text/javascript"
-								src="//smarticon.geotrust.com/si.js"
-							></script>
-							<!-- end GeoTrust Smart Icon tag -->
 						</div>
+						<!-- GeoTrust True Site [tm] Smart Icon tag. Do not edit. -->
+						<script language="JavaScript" type="text/javascript" src="//smarticon.geotrust.com/si.js"></script>
+						<!-- end GeoTrust Smart Icon tag -->
 					</form>
 				</div>
 			</div>
