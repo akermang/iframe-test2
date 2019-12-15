@@ -206,6 +206,7 @@ select > option{
   -webkit-transition: all 0.25s cubic-bezier(0.755,0.125,0.180,0.910);
   transition: all 0.25s cubic-bezier(0.755,0.125,0.180,0.910);
 }
+
 /* this hide the GeoTrust link */
 a[target="GT__SIP"] {
   display: none;
@@ -216,18 +217,29 @@ a[target="GT__SIP"] {
   font-family: NovemberHebrew;
 }
 
+.exp-month {
+   margin-right: 11px;
+}
+
 @media(max-width: 550px) {
   .card-details-container,
   .payment-container {
     flex-direction: column;
   }
+	
+  .exp-month {
+   margin-right: 0;
+  }
+	
   .card-details-container {
     margin-bottom: 1em;
   }
+	
   .exp-container {
 	width: 100%;
 	flex-dirction: row;
   }
+	
   .actions-wrap {
     flex-direction: column;
     width: 100%;
@@ -277,9 +289,13 @@ a[target="GT__SIP"] {
     font-size: 26px;
     width: 100%;
   }
+  
+  .mui-select {
+     margin-bottom: 0;
+  }	
 
   .card-number-container {
-    margin-bottom: 1em;;
+    margin-bottom: 0;
   }
 }
 
