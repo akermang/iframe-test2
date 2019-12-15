@@ -236,8 +236,8 @@ a[target="GT__SIP"] {
   }
 	
   .exp-container {
-	width: 100%;
-	flex-dirction: row;
+	 width: 100%;
+	 flex-direction: row;
   }
 	
   .actions-wrap {

@@ -30,6 +30,10 @@ body {
   display: flex;
 }
 
+::placeholder {
+  color: #f0efef;
+}
+
 .exp-container {
   display: flex;
 }
@@ -60,11 +64,11 @@ body {
   padding: 0 0.75em;
   height: 45px;
   box-sizing: border-box;
-  padding: 0;
+  padding: 0 9px;
   border-radius: 9px;
   background-color: rgba(234,236,240,0.3);
   border: solid 1px #cfd7db;
-  color: #202a31;
+  color: #f0efef;
   white-space: nowrap;
   overflow: hidden;
   font-family: NovemberCondHebrew;
@@ -80,7 +84,7 @@ body {
   -webkit-appearance:none;
   width: 90%;
   background-position: 4px 16px;
-  background-size: 22px;
+  background-size: 0;
 }
 .mui-select>select:focus,
 .mui-select:focus>select {
@@ -221,6 +225,11 @@ a[target="GT__SIP"] {
   font-family: NovemberHebrew;
 }
 
+input[type="submit"] {
+  background-color: #f7b800;
+  border-radius: 0.6em;
+}
+
 @media(max-width: 600px) {
   .card-details-container,
   .payment-container {
@@ -232,8 +241,11 @@ a[target="GT__SIP"] {
   
   .exp-container,
   .actions-wrap {
+    width: 100%;
+  }
+
+  .actions-wrap {
     flex-direction: column;
-    width: 100vw;
   }
 
   select,
@@ -253,6 +265,7 @@ a[target="GT__SIP"] {
   .form_buttons-wrapp {
     justify-content: center;
     margin: 0;
+    width: 100%;
   }
 
   .payment-info {
