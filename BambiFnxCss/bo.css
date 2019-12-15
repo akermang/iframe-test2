@@ -1,0 +1,305 @@
+
+@font-face {
+	font-family: 'NovemberCondHebrew';
+	font-weight: bold;
+	src: local('NovemberCondHebrew'),
+	 url('./fonts/NovemberCondHebrew-Bold.otf');
+  }
+@font-face {
+	font-family: 'NovemberHebrew';
+	src: local('NovemberHebrew'),
+	url('./fonts/NovemberHebrew-Regular.otf');
+  }
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: NovemberHebrew;
+  background-color: #44576b;
+}
+
+.payment-container {
+  display: flex;
+  direction: rtl;
+  background-color: #44576b;
+}
+
+.card-number-wrapp,
+.card-details-container {
+  display: flex;
+}
+
+.exp-container {
+  display: flex;
+}
+
+.input-payment {
+  height: 23px;
+  font-family: NovemberHebrew;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+}
+.mui-select {
+  padding-top: 0px;
+}
+
+/* .mui-select>select {
+  background-image: url('./assets/iconfinder_ic_expand_more_48px_352330.svg');
+} */
+
+.exp-month,
+.exp-year,
+.mui-select>select,
+.input-card-number {
+  padding: 0 0.75em;
+  height: 45px;
+  box-sizing: border-box;
+  padding: 0;
+  border-radius: 9px;
+  background-color: rgba(234,236,240,0.3);
+  border: solid 1px #cfd7db;
+  color: #202a31;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: NovemberCondHebrew;
+  font-size: 26px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.27;
+  letter-spacing: normal;
+  text-align: right;
+  resize: none;
+  margin-left: 1em;
+  -webkit-appearance:none;
+  width: 90%;
+  background-position: 4px 16px;
+  background-size: 22px;
+}
+.mui-select>select:focus,
+.mui-select:focus>select {
+  height: 50px;
+  margin-bottom: 0px;
+  border-color: #00d1cf;
+  border-width: 2px;
+}
+
+/* .exp-month,
+.exp-year {
+  color: #98a8b3;
+} */
+
+.exp-year {
+  margin-left: 0.5em;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.exp-month:focus,
+.exp-year:focus,
+.input-card-number:focus {
+  background-color: #ffffff;
+  border: solid 1px #cfd7db;
+  box-shadow: 0 4px 8px 0 rgba(82,132,187,0.3);
+  -webkit-transition: all 0.25s cubic-bezier(0.755,0.125,0.180,0.910);
+  transition: all 0.25s cubic-bezier(0.755,0.125,0.180,0.910);
+  outline: none;
+  -webkit-appearance:none;
+  border-bottom: solid 1px #83b9f2;
+}
+
+input[type="submit"] {
+  min-width: 183px;
+  font-family: NovemberHebrew;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  padding: 0 1.5em;
+  height: 44px;
+  -webkit-transition: all 0.1s cubic-bezier(0.755,0.125,0.18,0.91) 0s;
+  transition: all 0.1s cubic-bezier(0.755,0.125,0.18,0.91) 0s;
+  border-radius: 4px;
+  background-color: #f07400;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+  border-image: initial;
+  color: #fff;
+  box-shadow: none;
+  outline: 0;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+input[type="submit"]:active {
+  cursor: pointer;
+  outline: 0;
+}
+
+.input-label-wrapp {
+  margin-bottom: 8px;
+  color: #f0efef;
+}
+
+.actions-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form_buttons-wrapp {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 3em;
+}
+
+.payment-info {
+  display: none;
+  /* width: 50%;
+  font-family: NovemberHebrew;
+  font-size: 14px;
+  color: #6c7880;
+  margin-top: 1em; */
+}
+/* Edge */
+/* ::-webkit-input-placeholder { 
+  color: #98a8b3;
+} */
+/* Internet Explorer */
+/* :-ms-input-placeholder { 
+  color: #98a8b3;
+} */
+
+/* ::placeholder {
+  color: #98a8b3;
+} */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select > option{
+  background-color: #fff;
+  font-family: inherit;
+  -webkit-appearance:none;
+}
+
+.card-number-container input:hover {
+  background-color: rgba(187,220,255,0.15);
+  border-bottom: solid 1px #83b9f2;
+  -webkit-transition: all 0.25s cubic-bezier(0.755,0.125,0.180,0.910);
+  transition: all 0.25s cubic-bezier(0.755,0.125,0.180,0.910);
+}
+/* this hide the GeoTrust link */
+a[target="GT__SIP"] {
+  display: none;
+}
+
+.td_style_invalidField {
+  color: rgb(242, 100, 85);
+  font-family: NovemberHebrew;
+}
+
+@media(max-width: 600px) {
+  .card-details-container,
+  .payment-container {
+    flex-direction: column;
+  }
+  .card-details-container {
+    margin-bottom: 1em;
+  }
+  
+  .exp-container,
+  .actions-wrap {
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  select,
+  input {
+    width: 100%;
+  }
+
+  .exp-year-wrapper,
+  .exp-month-wrapper {
+    width: 100%;
+  }
+
+  .exp-year-wrapper {
+    margin-left: 1em;
+  }
+  
+  .form_buttons-wrapp {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .payment-info {
+    width: 100%;
+  }
+
+  .input-card-number {
+    margin: 0;
+  }
+
+  .submit-wrap {
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    min-width: 100%;
+    margin: 0 auto;
+  }
+
+  .mui-select>select,
+  .exp-month,
+  .exp-year,
+  .input-card-number {
+    border-bottom: 2px solid #00d1cf;
+    font-size: 26px;
+    width: 100%;
+  }
+
+  .card-number-container {
+    margin-bottom: 1em;;
+  }
+}
+
+  /* Edge */
+  /* ::-webkit-input-placeholder { 
+    color: #ffffff;
+  } */
+
+  /* Internet Explorer */
+  /* :-ms-input-placeholder { 
+    color: #ffffff;
+  } */
+
+  /* ::placeholder {
+    color: #ffffff;
+  } */
+
+  /* .input-label-wrapp {
+    color: #ffffff;
+  } */
