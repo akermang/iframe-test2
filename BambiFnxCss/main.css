@@ -216,7 +216,7 @@ a[target="GT__SIP"] {
   font-family: NovemberHebrew;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 550px) {
   .card-details-container,
   .payment-container {
     flex-direction: column;
@@ -226,6 +226,7 @@ a[target="GT__SIP"] {
   }
   .exp-container {
 	width: 100%;
+	flex-dirction: row;
   }
   .actions-wrap {
     flex-direction: column;
