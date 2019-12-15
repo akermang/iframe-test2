@@ -15,7 +15,6 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-  font-family: NovemberHebrew;
   background-color: #44576b;
 }
 
@@ -40,7 +39,6 @@ body {
 
 .input-payment {
   height: 23px;
-  font-family: NovemberHebrew;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
@@ -71,7 +69,6 @@ body {
   color: #f0efef;
   white-space: nowrap;
   overflow: hidden;
-  font-family: NovemberCondHebrew;
   font-size: 26px;
   font-weight: 300;
   font-stretch: normal;
@@ -90,8 +87,6 @@ body {
 .mui-select:focus>select {
   height: 50px;
   margin-bottom: 0px;
-  border-color: #00d1cf;
-  border-width: 2px;
 }
 
 /* .exp-month,
@@ -122,12 +117,10 @@ select {
   transition: all 0.25s cubic-bezier(0.755,0.125,0.180,0.910);
   outline: none;
   -webkit-appearance:none;
-  border-bottom: solid 1px #83b9f2;
 }
 
 input[type="submit"] {
   min-width: 183px;
-  font-family: NovemberHebrew;
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -212,7 +205,6 @@ select > option{
 
 .card-number-container input:hover {
   background-color: rgba(187,220,255,0.15);
-  border-bottom: solid 1px #83b9f2;
   -webkit-transition: all 0.25s cubic-bezier(0.755,0.125,0.180,0.910);
   transition: all 0.25s cubic-bezier(0.755,0.125,0.180,0.910);
 }
@@ -223,7 +215,6 @@ a[target="GT__SIP"] {
 
 .td_style_invalidField {
   color: rgb(242, 100, 85);
-  font-family: NovemberHebrew;
 }
 
 input[type="submit"] {
@@ -290,7 +281,6 @@ input[type="submit"] {
   .exp-month,
   .exp-year,
   .input-card-number {
-    border-bottom: 2px solid #00d1cf;
     font-size: 20px;
     width: 100%;
   }
