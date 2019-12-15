@@ -224,11 +224,12 @@ a[target="GT__SIP"] {
   .card-details-container {
     margin-bottom: 1em;
   }
-  
-  .exp-container,
+  .exp-container {
+	width: 100%;
+  }
   .actions-wrap {
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
   }
 
   select,
