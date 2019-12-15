@@ -80,8 +80,8 @@ body {
   margin-left: 1em;
   -webkit-appearance:none;
   width: 90%;
-  background-position: 4px 16px;
-  background-size: 1px;
+  background-position: 13px 19px;
+  background-size: 9px;
 }
 .mui-select>select:focus,
 .mui-select:focus>select {
