@@ -164,6 +164,7 @@ input[type="submit"]:active {
 .input-label-wrapp {
   margin-bottom: 8px;
   color: #f0efef;
+  font-family: 'Open Sans',Helvetica,Arial,sans-serif;
 }
 
 .actions-wrap {
@@ -290,7 +291,7 @@ input[type="submit"] {
   .exp-year,
   .input-card-number {
     border-bottom: 2px solid #00d1cf;
-    font-size: 26px;
+    font-size: 20px;
     width: 100%;
   }
 
