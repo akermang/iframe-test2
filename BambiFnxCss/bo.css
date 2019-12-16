@@ -64,9 +64,9 @@ body {
   box-sizing: border-box;
   padding: 0 9px;
   border-radius: 9px;
-  background-color: rgba(234,236,240,0.3);
+  background-color: rgba(234,236,240,0.3)!important;
   border: solid 1px #cfd7db;
-  color: #f0efef;
+  color: #f0efef!important;
   white-space: nowrap;
   overflow: hidden;
   font-size: 26px;
@@ -117,6 +117,11 @@ select {
   transition: all 0.25s cubic-bezier(0.755,0.125,0.180,0.910);
   outline: none;
   -webkit-appearance:none;
+}
+
+input:-internal-autofill-selected {
+  background-color: rgba(234,236,240,0.3)!important;
+  color: #f0efef!important;
 }
 
 input[type="submit"] {
