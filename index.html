@@ -254,9 +254,9 @@
 						<script>
 							function getUrlParameter(name) {
     							name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-							var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-   						 	var results = regex.exec(location.search);
-    							return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+								const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+   						 		const results = regex.exec(location.search);
+								return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 							};
 							
 							function getCss(cssId) {
@@ -278,7 +278,7 @@
 								    link.id   = 'mainCss';
 								    link.rel  = 'stylesheet';
 								    link.type = 'text/css';
-								    link.href = './BambiFnxCss/main.css';
+								    link.href = './BambiFnxCss/ob.css';
 								    link.media = 'all';
 								    headMid.appendChild(link);
 							};
@@ -289,7 +289,6 @@
 							getCss(cssCode)
         						};
        							window.onload = load;
-        						console.log('mid page');
 						</script>
 						<!-- GeoTrust True Site [tm] Smart Icon tag. Do not edit. -->
 						<script language="JavaScript" type="text/javascript" src="//smarticon.geotrust.com/si.js"></script>
