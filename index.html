@@ -259,7 +259,9 @@
    						 		const results = regex.exec(location.search);
 								return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 							};
-							
+
+							const cssCode = getUrlParameter('cssCode');
+
 							function getCss(cssCode = 'main') {
 								if (!document.getElementById(cssCode)) {
 								    const head  = document.getElementsByTagName('head')[0];
@@ -272,13 +274,14 @@
 								    head.appendChild(link);
 								};
 							};
-							
-							const load = () => {
-								const cssCode = getUrlParameter('cssCode');
-								if(cssCode) getCss(cssCode);
-							};
 
-							window.onload = load;
+							if(cssCode) getCss(cssCode);
+							
+							// const load = () => {
+								
+							// };
+
+							// window.onload = load;
 							
 						</script>
 						<!-- GeoTrust True Site [tm] Smart Icon tag. Do not edit. -->
