@@ -30,7 +30,7 @@
 				type="text/css"
 			/>
 			<!-- Bambi FNX CSS -->
-			<link href="./BambiFnxCss/bo.css" rel="stylesheet" type="text/css" />
+<!-- 			<link href="./BambiFnxCss/bo.css" rel="stylesheet" type="text/css" /> -->
 			<!-- <%=engCSS%> -->
 			<title></title>
 			<style type="text/css">
@@ -259,9 +259,34 @@
     							return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 							};
 							
+							function getCss(cssId) {
+								  // you could encode the css path itself to generate id..
+								if (!document.getElementById(cssId) && cssId)
+								{
+								    const head  = document.getElementsByTagName('head')[0];
+								    const link  = document.createElement('link');
+								    link.id   = cssId;
+								    link.rel  = 'stylesheet';
+								    link.type = 'text/css';
+								    link.href = './BambiFnxCss/' + cssId + '.css';
+								    link.media = 'all';
+								    head.appendChild(link);
+								    return;
+								}
+								    const headMid  = document.getElementsByTagName('head')[0];
+								    const link  = document.createElement('link');
+								    link.id   = 'mainCss';
+								    link.rel  = 'stylesheet';
+								    link.type = 'text/css';
+								    link.href = './BambiFnxCss/main.css';
+								    link.media = 'all';
+								    headMid.appendChild(link);
+							};
+							
         						const load = () => {
         						const cssCode = getUrlParameter('cssCode');  
         						console.log('mid-cssCode:', cssCode);
+							getCss(cssCode)
         						};
        							window.onload = load;
         						console.log('mid page');
