@@ -252,6 +252,7 @@
 							</div>
 						</div>
 						<script>
+
 							function getUrlParameter(name) {
     							name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
 								const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -259,36 +260,26 @@
 								return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 							};
 							
-							function getCss(cssId) {
-								  // you could encode the css path itself to generate id..
-								if (!document.getElementById(cssId) && cssId)
-								{
+							function getCss(cssCode = 'main') {
+								if (!document.getElementById(cssCode)) {
 								    const head  = document.getElementsByTagName('head')[0];
 								    const link  = document.createElement('link');
-								    link.id   = cssId;
+								    link.id   = cssCode;
 								    link.rel  = 'stylesheet';
 								    link.type = 'text/css';
-								    link.href = './BambiFnxCss/' + cssId + '.css';
+								    link.href = './BambiFnxCss/' + cssCode + '.css';
 								    link.media = 'all';
 								    head.appendChild(link);
-								    return;
-								}
-								    const headMid  = document.getElementsByTagName('head')[0];
-								    const link  = document.createElement('link');
-								    link.id   = 'mainCss';
-								    link.rel  = 'stylesheet';
-								    link.type = 'text/css';
-								    link.href = './BambiFnxCss/main.css';
-								    link.media = 'all';
-								    headMid.appendChild(link);
+								};
 							};
 							
-        						const load = () => {
-        						const cssCode = getUrlParameter('cssCode');  
-        						console.log('mid-cssCode:', cssCode);
-							getCss(cssCode)
-        						};
-       							window.onload = load;
+							const load = () => {
+								const cssCode = getUrlParameter('cssCode');
+								if(cssCode) getCss(cssCode);
+							};
+
+							window.onload = load;
+							
 						</script>
 						<!-- GeoTrust True Site [tm] Smart Icon tag. Do not edit. -->
 						<script language="JavaScript" type="text/javascript" src="//smarticon.geotrust.com/si.js"></script>
