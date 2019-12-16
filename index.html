@@ -121,6 +121,31 @@
       cal.add(Calendar.YEAR, 2);
       int year = cal.get(Calendar.YEAR);
 %>	 -->
+		<script>
+			function getUrlParameter(name) {
+				name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+				const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+					const results = regex.exec(location.search);
+				return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+			};
+
+			const cssCode = getUrlParameter('cssCode');
+
+			function getCss(cssCode = 'main') {
+				if (!document.getElementById(cssCode)) {
+					const head  = document.getElementsByTagName('head')[0];
+					const link  = document.createElement('link');
+					link.id   = cssCode;
+					link.rel  = 'stylesheet';
+					link.type = 'text/css';
+					link.href = './BambiFnxCss/' + cssCode + '.css';
+					link.media = 'all';
+					head.appendChild(link);
+				};
+			};
+
+			if(cssCode) getCss(cssCode);
+			</script>
 		</head>
 
 		<body onload="resetForm();">
@@ -251,39 +276,6 @@
 								</div>
 							</div>
 						</div>
-						<script>
-
-							function getUrlParameter(name) {
-    							name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-								const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-   						 		const results = regex.exec(location.search);
-								return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-							};
-
-							const cssCode = getUrlParameter('cssCode');
-
-							function getCss(cssCode = 'main') {
-								if (!document.getElementById(cssCode)) {
-								    const head  = document.getElementsByTagName('head')[0];
-								    const link  = document.createElement('link');
-								    link.id   = cssCode;
-								    link.rel  = 'stylesheet';
-								    link.type = 'text/css';
-								    link.href = './BambiFnxCss/' + cssCode + '.css';
-								    link.media = 'all';
-								    head.appendChild(link);
-								};
-							};
-
-							if(cssCode) getCss(cssCode);
-							
-							// const load = () => {
-								
-							// };
-
-							// window.onload = load;
-							
-						</script>
 						<!-- GeoTrust True Site [tm] Smart Icon tag. Do not edit. -->
 						<script language="JavaScript" type="text/javascript" src="//smarticon.geotrust.com/si.js"></script>
 						<!-- end GeoTrust Smart Icon tag -->
