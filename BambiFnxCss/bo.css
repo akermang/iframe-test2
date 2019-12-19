@@ -29,10 +29,6 @@ body {
   display: flex;
 }
 
-::placeholder {
-  color: #f0efef;
-}
-
 .exp-container {
   display: flex;
 }
@@ -47,13 +43,10 @@ body {
   letter-spacing: normal;
   text-align: right;
 }
+
 .mui-select {
   padding-top: 0px;
 }
-
-/* .mui-select>select {
-  background-image: url('./assets/iconfinder_ic_expand_more_48px_352330.svg');
-} */
 
 .exp-month,
 .exp-year,
