@@ -29,6 +29,10 @@ body {
   display: flex;
 }
 
+::placeholder {
+  color: black;
+}
+
 .exp-container {
   display: flex;
 }
