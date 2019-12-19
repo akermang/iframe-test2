@@ -39,7 +39,7 @@ body {
 
 .input-payment {
   height: 23px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -47,10 +47,13 @@ body {
   letter-spacing: normal;
   text-align: right;
 }
-
 .mui-select {
   padding-top: 0px;
 }
+
+/* .mui-select>select {
+  background-image: url('./assets/iconfinder_ic_expand_more_48px_352330.svg');
+} */
 
 .exp-month,
 .exp-year,
@@ -65,7 +68,7 @@ body {
   border: solid 1px #cfd7db;
   white-space: nowrap;
   overflow: hidden;
-  font-size: 26px;
+  font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -147,7 +150,8 @@ input[type="submit"]:active {
 .input-label-wrapp {
   margin-bottom: 8px;
   color: #f0efef;
-  font-family: 'Open Sans',Helvetica,Arial,sans-serif;
+  font-family: inherit;
+  font-size: 12px;
 }
 
 .actions-wrap {
@@ -255,7 +259,7 @@ input[type="submit"] {
   .exp-month,
   .exp-year,
   .input-card-number {
-    font-size: 20px;
+    font-size: 1rem;
     width: 100%;
   }
 
