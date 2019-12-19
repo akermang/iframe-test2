@@ -63,10 +63,9 @@ body {
   height: 45px;
   box-sizing: border-box;
   padding: 0 9px;
-  border-radius: 9px;
+  border-radius: 0px;
   background-color: rgba(234,236,240,0.3)!important;
   border: solid 1px #cfd7db;
-  color: #f0efef!important;
   white-space: nowrap;
   overflow: hidden;
   font-size: 26px;
@@ -88,11 +87,6 @@ body {
   height: 50px;
   margin-bottom: 0px;
 }
-
-/* .exp-month,
-.exp-year {
-  color: #98a8b3;
-} */
 
 .exp-year {
   margin-left: 0.5em;
@@ -119,11 +113,6 @@ select {
   -webkit-appearance:none;
 }
 
-input:-internal-autofill-selected {
-  background-color: rgba(234,236,240,0.3)!important;
-  color: #f0efef!important;
-}
-
 input[type="submit"] {
   min-width: 183px;
   font-size: 20px;
@@ -139,7 +128,6 @@ input[type="submit"] {
   height: 44px;
   -webkit-transition: all 0.1s cubic-bezier(0.755,0.125,0.18,0.91) 0s;
   transition: all 0.1s cubic-bezier(0.755,0.125,0.18,0.91) 0s;
-  border-radius: 4px;
   background-color: #f07400;
   border-width: 1px;
   border-style: solid;
@@ -178,24 +166,8 @@ input[type="submit"]:active {
 
 .payment-info {
   display: none;
-  /* width: 50%;
-  font-family: NovemberHebrew;
-  font-size: 14px;
-  color: #6c7880;
-  margin-top: 1em; */
 }
-/* Edge */
-/* ::-webkit-input-placeholder { 
-  color: #98a8b3;
-} */
-/* Internet Explorer */
-/* :-ms-input-placeholder { 
-  color: #98a8b3;
-} */
 
-/* ::placeholder {
-  color: #98a8b3;
-} */
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -224,7 +196,6 @@ a[target="GT__SIP"] {
 
 input[type="submit"] {
   background-color: #f7b800;
-  border-radius: 0.6em;
 }
 
 @media(max-width: 800px) {
@@ -275,6 +246,7 @@ input[type="submit"] {
 
   .submit-wrap {
     width: 100%;
+    background-color: #44576b;
   }
 
   input[type="submit"] {
@@ -295,20 +267,3 @@ input[type="submit"] {
   }
 }
 
-  /* Edge */
-  /* ::-webkit-input-placeholder { 
-    color: #ffffff;
-  } */
-
-  /* Internet Explorer */
-  /* :-ms-input-placeholder { 
-    color: #ffffff;
-  } */
-
-  /* ::placeholder {
-    color: #ffffff;
-  } */
-
-  /* .input-label-wrapp {
-    color: #ffffff;
-  } */
